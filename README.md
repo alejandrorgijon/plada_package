@@ -1,6 +1,6 @@
 # plada
 
-The package `plada` aims to help you PLAying with your DAta (quite original name, huh?). 
+The package `plada` aims to help you <i><b>PLA</b>ying with your <b>DA</b>ta</i> (quite original name, huh?). 
 
 ## Installation
 
@@ -41,6 +41,8 @@ name    length    GC        sequence
 ```
                                                                                                            
 ### `meancat()`: 
+Calculates the mean of a numerical variable (n) according to certain category (m) –> meancat(n, m).
+
 
 ### `percencat()`: 
 
