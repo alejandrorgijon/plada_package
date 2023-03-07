@@ -98,4 +98,8 @@ taxabu(df)
 
 This function calculates if a given categoric variable has a representation  above or under 50%.
 
+# Some useful resources I consulted during development and publication of the package.
+
+How to develop a R package? https://github.com/mvuorre/exampleRPackage
+
 
