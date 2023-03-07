@@ -1,0 +1,14 @@
+Package: plada
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: person("Alejandro", "Rodríguez Gijón", email = "alejandro.rgijon@gmail.com", role = c("aut", "cre"))
+Maintainer: The package maintainer <alejandro.rgijon@gmail.com>
+Description: This package allows you to PLAy with DAta: sort, understand your data, etc.
+Encoding: UTF-8
+LazyData: true
+Imports:
+    tidyverse
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.2.3
