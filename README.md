@@ -12,6 +12,8 @@ This package is currently only available through GitHub and can be downloaded us
 ```
 ## Functions
 
+During my PhD I needed some specific functions in R, but I could not find a package that would do them. Therefore, I decided to develope them. I used this functions to analyze microbial genomes assembled from metagenomes (MAGs), but I certainly think many people from other fields can find them useful! 
+
 At the moment, `plada` has 5 functions that I developed to help me managing and sorting data. Maybe in the future I will include more functions.
 The package also includes 3 fake datasets (`sequences`, `some_bacteria and `random_data`) to test the functions included here.
 
@@ -88,7 +90,7 @@ USA               11.11 1
 
 ### `taxabu()`: 
 
-As a microbial ecologist, sometimes I need to estimate how many of my genomes are classified into different taxonomical levels (or in other words, how many of my genomes are classified to the genus level? And to the class level?). To use this function, we need to provide a dataframe that should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
+As a microbial ecologist, sometimes I need to estimate how many of my genomes are classified into different taxonomical levels (i.e., How many of my genomes are classified to the genus level? And to the class level?). To use this function, we need to provide a dataframe that should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
 
 For example, I have provided in the package a fake dataset of 9 bacteria called `some_bacteria`:
 
