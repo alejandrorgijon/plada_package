@@ -90,7 +90,7 @@ USA               11.11 1
 
 As a microbial ecologist, sometimes I need to estimate how many of my genomes are classified into different taxonomical levels (or in other words, how many of my genomes are classified to the genus level? And to the class level?). To use this function, we need to provide a dataframe that should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
 
-For example, I have provided in the package a fake dataset of 9 bacteriacalled `some_bacteria`:
+For example, I have provided in the package a fake dataset of 9 bacteria called `some_bacteria`:
 
 ```
 > head(some_bacteria, n=10)
@@ -107,7 +107,7 @@ For example, I have provided in the package a fake dataset of 9 bacteriacalled `
 8 mOTU_007 d__Bacteria p__Cyanobacteria    c__Cyanobacteriia      o__PCC-6307         f__Cyanobiaceae      g__Vulcanococ… s__Vul…
 ```
 
-To use `taxabu()` we just need to provide a dataframe with the correct format, and call the dataframe using the function:
+To use `taxabu()` we just need to provide call the dataframe using the function:
 ```
 > taxabu(some_bacteria)
   Taxonomic_level Count
@@ -121,6 +121,7 @@ To use `taxabu()` we just need to provide a dataframe with the correct format, a
 8         Species     6
 9           Total     8
 ```
+As we can see, from a total of 8 mOTUs (metagenomic Operational Taxonomical Units), 8 were classified to the order level, 7 to the genus level and 6 to the species level.
 
 ### `which_envi()`: 
 
