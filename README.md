@@ -100,6 +100,6 @@ This function calculates if a given categoric variable has a representation  abo
 
 # Some useful resources I consulted during development and publication of the package.
 
-How to develop a R package? https://github.com/mvuorre/exampleRPackage
+- How to develop a R package? https://github.com/mvuorre/exampleRPackage
 
 
