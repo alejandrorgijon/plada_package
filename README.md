@@ -73,21 +73,6 @@ UK       1 1.0000000
 USA      1 1.0000000
 ```
 
-### `percencat()`: 
-
-However, if you want to estimate representation of all groups from a given category present on your dataset (let's say, you want to check how many of the people in your dataset are from UK), your function is `percencat()`.
-
-```
-> percencat(random_data$country)
-         Percentage (%) n
-Japan             11.11 1
-Spain             22.22 2
-Sweden            33.33 3
-Tanzania          11.11 1
-UK                11.11 1
-USA               11.11 1
-```
-
 ### `taxabu()`: 
 
 As a microbial ecologist, sometimes I need to estimate how many of my genomes are classified into different taxonomical levels (i.e., How many of my genomes are classified to the genus level? And to the class level?). To use this function, we need to provide a dataframe that should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
@@ -124,6 +109,22 @@ To use `taxabu()` we just need to provide call the dataframe using the function:
 9           Total     8
 ```
 As we can see, from a total of 8 mOTUs (metagenomic Operational Taxonomical Units), 8 were classified to the order level, 7 to the genus level and 6 to the species level.
+
+
+### `percencat()`: 
+
+However, if you want to estimate representation of different groups from a given category present on your dataset (let's say, you want to check how many Cyanobacteria are present in your dataset), your function is `percencat()`.
+
+```
+> percencat(random_data$country)
+         Percentage (%) n
+Japan             11.11 1
+Spain             22.22 2
+Sweden            33.33 3
+Tanzania          11.11 1
+UK                11.11 1
+USA               11.11 1
+```
 
 ### `which_envi()`: 
 
