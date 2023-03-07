@@ -12,8 +12,8 @@ This package is currently only available through GitHub and can be downloaded us
 ```
 ## Functions
 
-At the moment, `plada` has 5 functions that have been quite useful to manage and sort data. 
-The package also includes 2 fake datasets (`sequences` and `random_data`) to test the functions included here.
+At the moment, `plada` has 5 functions that I developed to help me managing and sorting data. Maybe in the future I will include more functions.
+The package also includes 3 fake datasets (`sequences`, `some_bacteria and `random_data`) to test the functions included here.
 
 ### `gesize()`: 
 This function calculates the GC percentage of given sequences and calculates the length of them (aka number of bases).
