@@ -2,6 +2,11 @@
 
 The package `plada` aims to help you <i><b>PLA</b>ying with your <b>DA</b>ta</i> (quite original name, huh?). 
 
+During my PhD I needed some specific functions in R, but I could not find a package that would do them. Therefore, I decided to develope them. I used these functions to sort and analyze genomic information and metadata of microbial genomes assembled from metagenomes (MAGs), but I certainly think many people from other fields can find them useful! 
+
+At the moment, `plada` has 5 functions that I developed to help me. Maybe in the future I will include more functions: suggestions are appreciated.
+Note that the package also includes 4 tables with data (`sequences`, `some_bacteria`,`environments` and `random_data`) to test the functions included here. But I'm sorry to tell you my friend, I made them up completely.
+
 ## Installation
 
 This package is currently only available through GitHub and can be downloaded using devtools.
@@ -11,11 +16,6 @@ This package is currently only available through GitHub and can be downloaded us
 > devtools::install_github("alejandrorgijon/plada")
 ```
 ## Functions
-
-During my PhD I needed some specific functions in R, but I could not find a package that would do them. Therefore, I decided to develope them. I used this functions to analyze microbial genomes assembled from metagenomes (MAGs), but I certainly think many people from other fields can find them useful! 
-
-At the moment, `plada` has 5 functions that I developed to help me managing and sorting data. Maybe in the future I will include more functions.
-The package also includes 4 invented datasets (`sequences`, `some_bacteria`,`environments` and `random_data`) to test the functions included here.
 
 ### `gesize()`: 
 This function calculates the GC percentage of given sequences and calculates the length of them (aka number of bases).
@@ -111,7 +111,6 @@ To use `taxabu()` we just need to provide call the dataframe using the function:
 As we can see, from a total of 8 mOTUs (metagenomic Operational Taxonomical Units), 8 were classified to the order level, 7 to the genus level and 6 to the species level.
 
 Important to note: this function has been build using the taxonomy provided by GTDBtk, and may not work with different formats.
-
 
 ### `percencat()`: 
 
