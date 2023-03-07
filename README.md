@@ -15,7 +15,7 @@ This package is currently only available through GitHub and can be downloaded us
 During my PhD I needed some specific functions in R, but I could not find a package that would do them. Therefore, I decided to develope them. I used this functions to analyze microbial genomes assembled from metagenomes (MAGs), but I certainly think many people from other fields can find them useful! 
 
 At the moment, `plada` has 5 functions that I developed to help me managing and sorting data. Maybe in the future I will include more functions.
-The package also includes 3 fake datasets (`sequences`, `some_bacteria and `random_data`) to test the functions included here.
+The package also includes 4 invented datasets (`sequences`, `some_bacteria`,`environments` and `random_data`) to test the functions included here.
 
 ### `gesize()`: 
 This function calculates the GC percentage of given sequences and calculates the length of them (aka number of bases).
@@ -129,9 +129,42 @@ p__Proteobacteria               25 2
 ### `which_envi()`: 
 
 This function calculates if a given categoric variable has a representation  above or under 50%.
+Let's say that, given the dataset `environments`, we want to check how many of our genomes are aquatic and how many are terrestrial, but also check which sub-environments we find under these categories. First, let's observe the dataset:
+
+```
+> head(environments, n = 10)
+# A tibble: 10 × 3
+   species   environment1 environment2
+   <chr>     <chr>        <chr>       
+ 1 species1  aquatic      marine      
+ 2 species2  aquatic      marine      
+ 3 species3  aquatic      marine      
+ 4 species4  aquatic      marine      
+ 5 species5  aquatic      marine      
+ 6 species6  aquatic      freshwater  
+ 7 species7  aquatic      freshwater  
+ 8 species8  aquatic      freshwater  
+ 9 species9  aquatic      freshwater  
+10 species10 aquatic      freshwater  
+...
+```
+
+To determine how many species we find on each sub-environment ($environment2), we will:
+
+```
+> which_envi(environments$environment1, environments$environment2)
+         cat1             cat2  n n_cat1 proportion
+1     aquatic       freshwater  6     11   Above50%
+2     aquatic           marine  5     11   Under50%
+3 terrestrial             clay  2     13   Under50%
+4 terrestrial plant-associated  1     13   Under50%
+5 terrestrial         volcanic 10     13   Above50%
+```
+
+Here, we observe that we have 11 species on aquatic environments (6 freshwater and 5 marine) and 13 terrestrial (2 clay, 1 plant-associated and 10 volcanic). This is indicated by n_cat1.
+
+Note by a friend: when you indicate the environments, go from bigger to smaller environments (which environment includes which?).
 
 # Some useful resources:
 
 - How to develop a R package? https://github.com/mvuorre/exampleRPackage
-
-
