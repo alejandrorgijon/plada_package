@@ -110,20 +110,20 @@ To use `taxabu()` we just need to provide call the dataframe using the function:
 ```
 As we can see, from a total of 8 mOTUs (metagenomic Operational Taxonomical Units), 8 were classified to the order level, 7 to the genus level and 6 to the species level.
 
+Important to note: this function has been build using the taxonomy provided by GTDBtk, and may not work with different formats.
+
 
 ### `percencat()`: 
 
 However, if you want to estimate representation of different groups from a given category present on your dataset (let's say, you want to check how many Cyanobacteria are present in your dataset), your function is `percencat()`.
 
 ```
-> percencat(random_data$country)
-         Percentage (%) n
-Japan             11.11 1
-Spain             22.22 2
-Sweden            33.33 3
-Tanzania          11.11 1
-UK                11.11 1
-USA               11.11 1
+> percencat(some_bacteria$Phylum)
+                    Percentage (%) n
+p__Actinobacteriota           12.5 1
+p__Bacteroidota               12.5 1
+p__Cyanobacteria                50 4
+p__Proteobacteria               25 2
 ```
 
 ### `which_envi()`: 
