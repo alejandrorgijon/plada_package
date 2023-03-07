@@ -17,7 +17,7 @@ The package also includes 2 fake datasets (`sequences` and `random_data`) to tes
 
 ### `gesize()`: 
 This function calculates the GC percentage of given sequences and calculates the length of them (aka number of bases).
-For example, I have provided in the package a fake dataset of genetic sequences called `sequeneces`:
+For example, I have provided in the package a fake dataset of genetic sequences called `sequences`:
 
 ```
 > head(sequences)
@@ -42,13 +42,60 @@ name    length    GC        sequence
                                                                                                            
 ### `meancat()`: 
 Calculates the mean of a numerical variable (n) according to certain category (m) –> meancat(n, m).
+For example, I have provided in the package a fake dataset of the number of dogs that different people have (I love dogs <3) called `random_data`:
 
 ```
-head(random_data)
+> head(random_data, n=10)
+   person  country n_dogs
+1 person1    Spain      3
+2 person2 Tanzania      2
+3 person3      USA      1
+4 person4    Spain      1
+5 person5       UK      1
+6 person6   Sweden      0
+7 person7   Sweden      0
+8 person8   Sweden      1
+9 person9    Japan      2
+```
+
+If we use the function `meancat()`, we can observe how many dogs have people in average in every country:
+
+```
+> meancat(random_data$n_dogs, random_data$country)
+         n      mean
+Japan    1 2.0000000
+Spain    2 2.0000000
+Sweden   3 0.3333333
+Tanzania 1 2.0000000
+UK       1 1.0000000
+USA      1 1.0000000
+```
 
 ### `percencat()`: 
 
+However, if you want to estimate representation of all groups from a given category present on your dataset (let's say, you want to check how many of the people in your dataset are from UK), your function is `percencat()`.
+
+```
+> percencat(random_data$country)
+         Percentage (%) n
+Japan             11.11 1
+Spain             22.22 2
+Sweden            33.33 3
+Tanzania          11.11 1
+UK                11.11 1
+USA               11.11 1
+```
+
 ### `taxabu()`: 
 
+As a microbial ecologist, sometimes I need to calculates how many groups (let´s say, metagenomic Operational Taxonomical Units, or mOTUs) are classified into different taxonomical levels. The dataframe to provide to this function should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
+
+```
+taxabu(df)
+```
+
 ### `which_envi()`: 
+
+This function calculates if a given categoric variable has a representation  above or under 50%.
+
 
