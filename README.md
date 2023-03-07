@@ -7,7 +7,7 @@ The package `plada` aims to help you PLAying with your DAta.
 plada is currently only available through GitHub and can be downloaded using devtools.
 
 ```
-# install.packages("plada")
+install.packages("plada")
 devtools::install_github("alejandrorgijon/plada")
 ```
 
