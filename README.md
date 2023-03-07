@@ -7,8 +7,8 @@ The package `plada` aims to help you PLAying with your DAta (quite original name
 This package is currently only available through GitHub and can be downloaded using devtools.
 
 ```
-install.packages("devtools")
-devtools::install_github("alejandrorgijon/plada")
+> install.packages("devtools")
+> devtools::install_github("alejandrorgijon/plada")
 ```
 ## Functions
 
@@ -20,7 +20,7 @@ This function calculates the GC percentage of given sequences and calculates the
 For example, I have provided in the package a fake dataset of genetic sequences called `sequeneces`:
 
 ```
-head(sequences)
+> head(sequences)
 1       seq1    GCGCGCGGGCATCGTAGCTGCTCGCGCTAGCTACGTCCGCTCTCGACTAGCTGACTGCGCTCAGCTATGCTACGATCGTACGATCGTGCTATGCTAGTGCATGCTAGCTAGC
 2       seq2    CGATCGTAGCTACGTAGCTAGCTGATCGACTAGTGATCGCGTAGCTAGCTGCTGCTCGTCGTATGACTAGCTGATCGATCGATCGATCGTAGCTAGCTAGCTAGCTGATCGTAG
 3       seq3    cgatcgcgatcgtactgctgtcggtggcta
@@ -31,7 +31,7 @@ head(sequences)
 If we use the function `gesize(), indicating which column has the genetic sequences and which column has the name given to the sequence, we can retrieve the GC composition and length of the sequence:
 
 ```
-gesize(sequences$genseqs, sequences$columnames)
+> gesize(sequences$genseqs, sequences$columnames)
 name    length    GC        sequence
 1 seq1   112      59.82    GCGCGCGGGCATCGTAGCTGCTCGCGCTAGCTACGTCCGCTCTCGACTAGCTGACTGCGCTCAGCTATGCTACGATCGTACGATCGTGCTATGCTAGTGCATGCTAGCTAGC
 2 seq2   114      51.75    CGATCGTAGCTACGTAGCTAGCTGATCGACTAGTGATCGCGTAGCTAGCTGCTGCTCGTCGTATGACTAGCTGATCGATCGATCGATCGTAGCTAGCTAGCTAGCTGATCGTAG
