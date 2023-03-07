@@ -13,7 +13,7 @@ This package is currently only available through GitHub and can be downloaded us
 ## Functions
 
 At the moment, `plada` has 5 functions that have been quite useful to manage and sort data. 
-The package also includes 2 fake datasets to test the functions included here.
+The package also includes 2 fake datasets (`sequences` and `random_data`) to test the functions included here.
 
 ### `gesize()`: 
 This function calculates the GC percentage of given sequences and calculates the length of them (aka number of bases).
@@ -43,6 +43,8 @@ name    length    GC        sequence
 ### `meancat()`: 
 Calculates the mean of a numerical variable (n) according to certain category (m) –> meancat(n, m).
 
+```
+head(random_data)
 
 ### `percencat()`: 
 
