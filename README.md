@@ -88,10 +88,38 @@ USA               11.11 1
 
 ### `taxabu()`: 
 
-As a microbial ecologist, sometimes I need to calculates how many groups (let´s say, metagenomic Operational Taxonomical Units, or mOTUs) are classified into different taxonomical levels. The dataframe to provide to this function should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
+As a microbial ecologist, sometimes I need to estimate how many of my genomes are classified into different taxonomical levels (or in other words, how many of my genomes are classified to the genus level? And to the class level?). To use this function, we need to provide a dataframe that should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
+
+For example, I have provided in the package a fake dataset of 9 bacteriacalled `some_bacteria`:
 
 ```
-taxabu(df)
+> head(some_bacteria, n=10)
+# A tibble: 8 × 8
+  mOTU     Domain      Phylum              Class                  Order               Family               Genus          Species
+  <chr>    <chr>       <chr>               <chr>                  <chr>               <chr>                <chr>          <chr>  
+1 mOTU_001 d__Bacteria p__Actinobacteriota c__Actinomycetia       o__Mycobacteriales  f__Mycobacteriaceae  g__Mycobacter… s__Myc…
+2 mOTU_002 d__Bacteria p__Cyanobacteria    c__Cyanobacteriia      o__Cyanobacteriales f__Nostocaceae       g__Dolichospe… s__Dol…
+3 mOTU_002 d__Bacteria p__Cyanobacteria    c__Cyanobacteriia      o__Cyanobacteriales f__Nostocaceae       g__Dolichospe… s__Dol…
+4 mOTU_003 d__Bacteria p__Proteobacteria   c__Alphaproteobacteria o__Rhodobacterales  f__Rhodobacteraceae  g__Roseicyclus s__    
+5 mOTU_004 d__Bacteria p__Cyanobacteria    c__Cyanobacteriia      o__PCC-6307         f__Cyanobiaceae      g__Synechococ… s__Syn…
+6 mOTU_005 d__Bacteria p__Bacteroidota     c__Bacteroidia         o__Flavobacteriales f__Flavobacteriaceae g__Polaribact… s__Pol…
+7 mOTU_006 d__Bacteria p__Proteobacteria   c__Alphaproteobacteria o__Rhodobacterales  f__                  g__            s__    
+8 mOTU_007 d__Bacteria p__Cyanobacteria    c__Cyanobacteriia      o__PCC-6307         f__Cyanobiaceae      g__Vulcanococ… s__Vul…
+```
+
+To use `taxabu()` we just need to provide a dataframe with the correct format, and call the dataframe using the function:
+```
+> taxabu(some_bacteria)
+  Taxonomic_level Count
+1            mOTU     8
+2          Domain     8
+3          Phylum     8
+4           Class     8
+5           Order     8
+6          Family     7
+7           Genus     7
+8         Species     6
+9           Total     8
 ```
 
 ### `which_envi()`: 
