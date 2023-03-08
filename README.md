@@ -1,11 +1,12 @@
 # plada
+> *Copyright 2023 (Alejandro Rodríguez-Gijón). Licensed under the MIT license.*
 
 The package `plada` aims to help you <i><b>PLA</b>ying with your <b>DA</b>ta</i> (quite original name, huh?). 
 
 During my PhD I needed some specific functions in R, but I could not find a package that would do them. Therefore, I decided to develope them. I used these functions to sort and analyze genomic information and metadata of microbial genomes assembled from metagenomes (MAGs), but I certainly think many people from other fields can find them useful! 
 
-At the moment, `plada` has 5 functions that I developed to help me. Maybe in the future I will include more functions: suggestions are appreciated.
-Note that the package also includes 4 tables with data (`sequences`, `some_bacteria`,`environments` and `random_data`) to test the functions included here. But I'm sorry to tell you my friend, I made them up completely.
+At the moment, `plada` has 5 functions, but I may include more functions in the future: suggestions are appreciated.
+Note that the package also includes 4 tables with data (`sequences`, `some_bacteria`,`environments` and `random_data`) to test the functions included here. But I'm sorry to tell you my friend, these tables were randomly generated.
 
 ## Installation
 
@@ -43,7 +44,7 @@ name    length    GC        sequence
 ```
                                                                                                            
 ### `meancat()`: 
-Calculates the mean of a numerical variable (n) according to certain category (m) –> meancat(n, m).
+Calculates the mean of a numerical variable (n) according to certain category (m).
 For example, I have provided in the package a fake dataset of the number of dogs that different people have (I love dogs <3) called `random_data`:
 
 ```
@@ -77,7 +78,7 @@ USA      1 1.0000000
 
 As a microbial ecologist, sometimes I need to estimate how many of my genomes are classified into different taxonomical levels (i.e., How many of my genomes are classified to the genus level? And to the class level?). To use this function, we need to provide a dataframe that should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
 
-For example, I have provided in the package a fake dataset of 9 bacteria called `some_bacteria`:
+For example, I have provided in the package a fake dataset of 8 bacteria called `some_bacteria`:
 
 ```
 > head(some_bacteria, n=10)
@@ -94,7 +95,7 @@ For example, I have provided in the package a fake dataset of 9 bacteria called 
 8 mOTU_007 d__Bacteria p__Cyanobacteria    c__Cyanobacteriia      o__PCC-6307         f__Cyanobiaceae      g__Vulcanococ… s__Vul…
 ```
 
-To use `taxabu()` we just need to provide call the dataframe using the function:
+To use `taxabu()` we just need to provide the dataframe using the function:
 ```
 > taxabu(some_bacteria)
   Taxonomic_level Count
@@ -108,6 +109,7 @@ To use `taxabu()` we just need to provide call the dataframe using the function:
 8         Species     6
 9           Total     8
 ```
+
 As we can see, from a total of 8 mOTUs (metagenomic Operational Taxonomical Units), 8 were classified to the order level, 7 to the genus level and 6 to the species level.
 
 Important to note: this function has been build using the taxonomy provided by GTDBtk, and may not work with different formats.
@@ -123,6 +125,17 @@ p__Actinobacteriota           12.5 1
 p__Bacteroidota               12.5 1
 p__Cyanobacteria                50 4
 p__Proteobacteria               25 2
+```
+```
+> percencat(some_bacteria$Genus)
+                   Percentage (%) n
+g__                          12.5 1
+g__Dolichospermum              25 2
+g__Mycobacterium             12.5 1
+g__Polaribacter              12.5 1
+g__Roseicyclus               12.5 1
+g__Synechococcus_D           12.5 1
+g__Vulcanococcus             12.5 1
 ```
 
 ### `which_envi()`: 
