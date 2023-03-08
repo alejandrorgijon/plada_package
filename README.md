@@ -30,7 +30,7 @@ For example, I have provided in the package a fake dataset of genetic sequences 
 5       seq5    ACTCGTAGCGTTGGTCATcatcgtagctagcgctagctgatgccaaaaa
 ```
 
-If we use the function `gesize(), indicating which column has the genetic sequences and which column has the name given to the sequence, we can retrieve the GC composition and length of the sequence:
+If we use the function `gesize()`, indicating which column has the genetic sequences and which column has the name given to the sequence, we can retrieve the GC composition and length of the sequence:
 
 ```
 > gesize(sequences$genseqs, sequences$columnames)
