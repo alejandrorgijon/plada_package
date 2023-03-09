@@ -183,4 +183,4 @@ Note by a friend: when you indicate the environments, go from bigger to smaller 
 
 # Acknowledgements
 
-Thanks Armando Pacheco Valenciana for helpi testing the package.
+Thanks Armando Pacheco Valenciana for your help testing the package.
