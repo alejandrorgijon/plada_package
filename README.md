@@ -180,3 +180,7 @@ Note by a friend: when you indicate the environments, go from bigger to smaller 
 # Some useful resources:
 
 - How to develop a R package? https://github.com/mvuorre/exampleRPackage
+
+# Acknowledgements
+
+Thanks Armando Pacheco Valenciana for helpi testing the package.
