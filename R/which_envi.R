@@ -13,7 +13,6 @@ which_envi <- function(category1, category2){
   names(table1) <- c("category1", "category2")
   taxa <- table(table1$category1)
   taxa_half <- data.frame(taxa/2)
-  library(dplyr)
   frequencies <- table1 %>% group_by(category1, category2) %>% summarise(nrow=n())
   names(frequencies) <- c("taxa", "environment", "number")
   finaltable <- merge(x = frequencies, y = taxa_half, by.x = "taxa", by.y = "Var1")
