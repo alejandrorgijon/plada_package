@@ -8,7 +8,6 @@ Description: This package allows you to PLAy with DAta: sort, understand your da
 Encoding: UTF-8
 LazyData: true
 Imports:
-    tidyverse
     dplyr
 Depends: 
     R (>= 2.10)
