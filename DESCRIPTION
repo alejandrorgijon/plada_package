@@ -8,8 +8,7 @@ Description: This package allows you to PLAy with DAta: sort, understand your da
 Encoding: UTF-8
 LazyData: true
 Imports:
-    tidyverse (>= 1.3.2),
-    dplyr (>= 1.0.10)
+    dplyr (>= 1.0.0)
 Depends: 
     R (>= 2.10)
 RoxygenNote: 7.2.3
