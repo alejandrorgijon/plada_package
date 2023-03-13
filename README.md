@@ -112,7 +112,7 @@ To use `taxabu()` we just need to provide the dataframe using the function:
 
 As we can see, from a total of 8 mOTUs (metagenomic Operational Taxonomical Units), 8 were classified to the order level, 7 to the genus level and 6 to the species level.
 
-Important to note: this function has been build using the taxonomy provided by GTDBtk, and may not work with different formats.
+Important to note: this function has been build using the taxonomy provided by GTDBtk (https://github.com/Ecogenomics/GTDBTk), and may not work with different formats.
 
 ### `percencat()`: 
 
@@ -180,6 +180,7 @@ Note by a friend: when you indicate the environments, go from bigger to smaller 
 # Some useful resources:
 
 - How to develop a R package? https://github.com/mvuorre/exampleRPackage
+- Chaumeil PA, et al. 2022. GTDB-Tk v2: memory friendly classification with the Genome Taxonomy Database. Bioinformatics, btac672.
 
 # Acknowledgements
 
