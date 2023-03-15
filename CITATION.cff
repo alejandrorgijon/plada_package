@@ -1,8 +1,0 @@
-cff-version: 0.1.0
-message: If you use this software, please cite it as below.
-authors:
-  - family-names: Rodríguez-Gijón
-    given-names: Alejandro
-title: "Plada: a R package to PLAy with your DAta"
-date-released: 2023-0X-0X
-url: https://github.com/alejandrorgijon/plada
