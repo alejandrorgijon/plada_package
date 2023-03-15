@@ -185,8 +185,4 @@ Note by a friend: when you indicate the environments, go from bigger to smaller 
 
 # Acknowledgements
 
-Thanks Armando Pacheco Valenciana for your help testing the package.
-
-# Citation
-
-Rodríguez-Gijón, A. Plada: a R package to PLAy with your DAta [Computer software]. https://github.com/alejandrorgijon/plada
+Thanks Armando Pacheco Valenciana for your help testing the package. Thanks Sarahi L. Garcia for your useful advice.
