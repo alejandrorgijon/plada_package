@@ -1,7 +1,7 @@
 # plada
 > *Copyright 2023 (Alejandro Rodríguez-Gijón). Licensed under the MIT license.*
 
-The package `plada` aims to help you <i><b>PLA</b>ying with your <b>DA</b>ta</i> (quite original name, huh?). 
+The package `plada` aims to help you <i><b>PLA</b>ying with your meta<b>DA</b>ta</i> (quite original name, huh?). 
 
 During my PhD I needed some specific functions in R, but I could not find a package that would do them. Therefore, I decided to develope them. I used these functions to sort and analyze genomic information and metadata of microbial genomes assembled from metagenomes (MAGs), but I certainly think many people from other fields can find them useful! 
 
@@ -78,6 +78,8 @@ USA      1 1.0000000
 
 As a microbial ecologist, sometimes I need to estimate how many of my genomes are classified into different taxonomical levels (i.e., How many of my genomes are classified to the genus level? And to the class level?). To use this function, we need to provide a dataframe that should contain 8 columns, normally in the order as follows: mOTU, domain, phyla, class, order, family, genera, species.
 
+Important to note: this function has been build using the taxonomy provided by GTDBtk (https://github.com/Ecogenomics/GTDBTk), and may not work with different formats.
+
 For example, I have provided in the package a fake dataset of 8 bacteria called `some_bacteria`:
 
 ```
@@ -112,7 +114,6 @@ To use `taxabu()` we just need to provide the dataframe using the function:
 
 As we can see, from a total of 8 mOTUs (metagenomic Operational Taxonomical Units), 8 were classified to the order level, 7 to the genus level and 6 to the species level.
 
-Important to note: this function has been build using the taxonomy provided by GTDBtk (https://github.com/Ecogenomics/GTDBTk), and may not work with different formats.
 
 ### `percencat()`: 
 
