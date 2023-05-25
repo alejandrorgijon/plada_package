@@ -112,7 +112,7 @@ To use `taxabu()` we just need to provide the dataframe using the function:
 9           Total     8
 ```
 
-As we can see, from a total of 8 mOTUs (metagenomic Operational Taxonomical Units), 8 were classified to the order level, 7 to the genus level and 6 to the species level.
+As we can see, from a total of 8 genomes, 8 were classified to the order level, 7 to the genus level and 6 to the species level.
 
 
 ### `percencat()`: 
