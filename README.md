@@ -1,12 +1,12 @@
-# plada
+# Plada: an R package to PLAy with your DAta
 > *Copyright 2023 (Alejandro Rodríguez-Gijón). Licensed under the MIT license.*
 
-The package `plada` aims to help you <i><b>PLA</b>ying with your meta<b>DA</b>ta</i> (quite original name, huh?). 
+The package `plada` aims to help you <i><b>PLA</b>ying with your <b>DA</b>ta</i> (quite original name, huh?). 
 
-During my PhD I needed some specific functions in R, but I could not find a package that would do them. Therefore, I decided to develope them. I used these functions to sort and analyze genomic information and metadata of microbial genomes assembled from metagenomes (MAGs), but I certainly think many people from other fields can find them useful! 
+During my PhD I needed some specific functions in R, but I could not find a package that would perform them. Therefore, I decided to develope them. I used these functions to sort and analyze genomic information and metadata of microbial genomes assembled from metagenomes (MAGs), but I certainly think many people from other fields can find them useful! 
 
 At the moment, `plada` has 5 functions, but I may include more functions in the future: suggestions are appreciated.
-Note that the package also includes 4 tables with data (`sequences`, `some_bacteria`,`environments` and `random_data`) to test the functions included here. But I'm sorry to tell you my friend, these tables were randomly generated.
+Note that the package also includes 4 tables with data (`sequences`, `some_bacteria`,`environments` and `random_data`) to test the functions included here. But I'm sorry to tell you my friend, these tables were randomly generated and they are not real.
 
 ## Installation
 
