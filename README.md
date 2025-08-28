@@ -1,5 +1,4 @@
 # Plada: an R package to PLAy with your DAta
-> *Copyright 2023 (Alejandro Rodríguez-Gijón). Licensed under the MIT license.*
 
 The package `plada` aims to help you <i><b>PLA</b>ying with your <b>DA</b>ta</i> (quite original name, huh?). 
 
